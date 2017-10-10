@@ -9,6 +9,11 @@ package iVote;
  *
  * @author mannyjuarez
  */
-public class TrueFalse {
+public class TrueFalse implements Question{
+
+    @Override
+    public void setQuestion(String question) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
