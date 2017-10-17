@@ -10,7 +10,7 @@ package iVote;
  * @author mannyjuarez
  */
 public interface Question {
-    
+    //methods to override
     public void setQuestion(String question);
     
     public String getQuestion();

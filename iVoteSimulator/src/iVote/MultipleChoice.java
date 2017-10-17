@@ -11,6 +11,7 @@ package iVote;
  */
 public class MultipleChoice implements Question 
 {
+    //all overriden methods
     private String question;
     private String[] candidates = new String[4];
     

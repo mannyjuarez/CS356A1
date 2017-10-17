@@ -12,9 +12,13 @@ import java.util.*;
  * @author mannyjuarez
  */
 public class iVoteService {
+    //take note of the student ID to check if answered previously
     List<String> studentVoters = new ArrayList<String>();
+    
+    //keeps count of the all responses to the answers
     private int[] count;
             
+    //a Question object that will be either multiple or single depending on input
     private Question question;
     
     public void configureQuestion(String input)
@@ -30,12 +34,14 @@ public class iVoteService {
         }
     }
     
+    //now that the question type has been decided, the actual question may be set
     public void setQuestion(String question)
     {
         this.question.setQuestion(question);
         System.out.println(this.question.getQuestion());
     }
     
+    //now the candidates or answers to the question have been set
     public void configureCandidates(String[] answers)
     {
         this.question.setCandidates(answers);
@@ -46,6 +52,9 @@ public class iVoteService {
         count = new int[answers.length];
     }
     
+    //take a student and an answer, and if the student has answered before then
+    //they aren't allowed to answer again, they're vote will stay the same. 
+    //The options are not case sensitive and include a, b, c, d,right, and wrong
     public void takeAnswers(Student student, String answer)
     {
         if (studentVoters.contains(student.getStudentID())) {}
@@ -67,6 +76,7 @@ public class iVoteService {
         }
     }
     
+    //prints the results of the votes.
     public void printResults()
     {
         for (int i = 0; i < count.length; i++)

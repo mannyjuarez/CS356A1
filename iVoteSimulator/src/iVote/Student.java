@@ -10,6 +10,8 @@ package iVote;
  * @author mannyjuarez
  */
 public class Student {
+    //student contains an ID and the answer they've given, all private
+    //with getter and setter methods
     private String studentID;
     private String answer;
     

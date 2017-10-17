@@ -9,6 +9,7 @@ package iVote;
  *
  * @author mannyjuarez
  */
+//implements Question interface
 public class TrueFalse implements Question{
     private String question;
     private String[] candidates = new String[2];
