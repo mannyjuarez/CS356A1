@@ -10,10 +10,29 @@ package iVote;
  * @author mannyjuarez
  */
 public class TrueFalse implements Question{
-
+    private String question;
+    private String[] candidates = new String[2];
+    
     @Override
     public void setQuestion(String question) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.question = question;
+    }
+
+    @Override
+    public String getQuestion() {
+        return question;
+    }
+
+    @Override
+    public void setCandidates(String[] answers) {
+        for (int i = 0; i < candidates.length; i ++)
+        {
+            candidates[i] = answers[i];
+        }
     }
     
+    public String[] getCandidates()
+    {
+        return candidates;
+    }
 }

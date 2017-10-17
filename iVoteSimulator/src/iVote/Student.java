@@ -11,6 +11,7 @@ package iVote;
  */
 public class Student {
     private String studentID;
+    private String answer;
     
     public void setStudentID(String ID)
     {
@@ -21,4 +22,16 @@ public class Student {
     {
         return studentID;
     }
+    
+    public void setAnswer(String answer)
+    {
+        this.answer = answer;
+    }
+    
+    public String getAnswer()
+    {
+        return answer;
+    }
+    
+    
 }

@@ -13,4 +13,9 @@ public interface Question {
     
     public void setQuestion(String question);
     
+    public String getQuestion();
+    
+    public void setCandidates(String[] answers);
+    
+    public String[] getCandidates();
 }
